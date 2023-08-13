@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discord | Your Place to Talk and Hang Out.</title>
+    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+  </head>
+
+  <!-- master div 
+  px - 8 -->
+  <body class="text-white font-fredoka">
+    <div
+      id="hero-container"
+      class="px-6 pb-14 bg-[#404EED] min-h-[98vh] relative overflow-hidden"
+      style="
+        background-image: url('/images/Image0.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      "
+    >
+      <div class="relative z-10">
+        <!-- Navigation Bar -->
+
+        <nav
+          class="flex justify-between lg:justify-evenly py-5 px-4 md:px-2 lg:px-16 xl:px-20 items-center"
+          id="navbar"
+        >
+          <div class="logobox">
+            <img src="./images/logo.svg" alt="Discord Logo" />
+          </div>
+          <div
+            class="hidden md:flex jusitfy-around font-normal text-md flex-1 mx-auto"
+          >
+            <div class="mx-auto">
+              <a
+                href="#"
+                class="p-4 no-underline hover:underline hover:underline-offset-8"
+                >Download</a
+              >
+              <a
+                href="#"
+                class="p-4 no-underline hover:underline hover:underline-offset-8"
+                >Nitro</a
+              >
+              <a
+                href="#"
+                class="p-4 no-underline hover:underline hover:underline-offset-8"
+                >Discover</a
+              >
+              <a
+                href="#"
+                class="p-4 no-underline hover:underline hover:underline-offset-8 md:hidden lg:inline-block"
+                >Safety</a
+              >
+              <a
+                href="#"
+                class="p-4 no-underline hover:underline hover:underline-offset-8"
+                >Support</a
+              >
+              <a
+                href="#"
+                class="p-4 no-underline hover:underline hover:underline-offset-8 md:hidden lg:inline-block"
+                >Blog</a
+              >
+              <a
+                href="#"
+                class="p-4 no-underline hover:underline hover:underline-offset-8"
+                >Careers</a
+              >
+            </div>
+          </div>
+          <div class="pl-2 flex">
+            <a
+              href="#"
+              class="rounded-full bg-white border-none text-black text-md px-4 py-2 font-thin"
+              role="button"
+              >Login</a
+            >
+            <button
+              class="px-2 relative z-40 md:hidden flex items-center"
+              id="nav-btn"
+            >
+              <ion-icon
+                name="menu-outline"
+                class="text-3xl"
+                id="open-nav"
+              ></ion-icon>
+            </button>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Navigation for Mobile  -->
+      <div
+        class="w-1/2 hidden h-screen absolute z-40 text-black bg-white rounded-tl-lg -right-[100%] top-0 transition-all duration-300 px-6"
+        id="nav-mobile-menu"
+      >
+        <div
+          class="flex flex-col items-start justify-between font-normal text-left w-full relative py-6 gap-10"
+        >
+          <button class="px-2 relative top-6 left-32" id="nav-menu-btn">
+            <ion-icon
+              name="close-outline"
+              class="text-3xl text-black"
+              id="close-nav"
+            ></ion-icon>
+          </button>
+          <div class="logobox">
+            <img src="./images/logo_dark.svg" alt="Discord Logo" />
+          </div>
+          <div class="flex flex-col gap-2">
+            <a
+              href="#"
+              class="p-4 no-underline hover:underline hover:underline-offset-8"
+              >Download</a
+            >
+            <a
+              href="#"
+              class="p-4 no-underline hover:underline hover:underline-offset-8"
+              >Nitro</a
+            >
+            <a
+              href="#"
+              class="p-4 no-underline hover:underline hover:underline-offset-8"
+              >Discover</a
+            >
+            <a
+              href="#"
+              class="p-4 no-underline hover:underline hover:underline-offset-8"
+              >Safety</a
+            >
+            <a
+              href="#"
+              class="p-4 no-underline hover:underline hover:underline-offset-8"
+              >Support</a
+            >
+            <a
+              href="#"
+              class="p-4 no-underline hover:underline hover:underline-offset-8"
+              >Blog</a
+            >
+            <a
+              href="#"
+              class="p-4 no-underline hover:underline hover:underline-offset-8"
+              >Careers</a
+            >
+          </div>
+          <button
+            class="rounded-full bg-[#404EED] border-none text-white text-sm px-4 py-2 font-thin"
+          >
+            <i class="fa-solid fa-download"></i>
+            Download for Linux
+          </button>
+        </div>
+      </div>
+      <!-- Hero section  -->
+      <div class="relative py-14 z-10">
+        <div
+          id="hero-content"
+          class="flex flex-col mx-auto items-start gap-4 lg:gap-10 justify-start lg:items-center pb-14 lg:pt-20 pt-6"
+        >
+          <div class="flex flex-wrap">
+            <h1
+              class="text-2xl md:text-5xl lg:text-6xl font-extrabold uppercase font-fredoka leading-10 -tracking-tighter"
+            >
+              Imagine a place...
+            </h1>
+          </div>
+          <div class="flex flex-wrap">
+            <p
+              class="text-sm md:text-lg lg:text-xl md:font-medium w-10/12 md:w-2/3 lg:w-1/2 lg:mx-auto break-words"
+            >
+              ...where you can belong to a school club, a gaming group, or a
+              worldwide art community. Where just you and a handful of friends
+              can spend time together. A place that makes it easy to talk every
+              day and hang out more often.
+            </p>
+          </div>
+          <div
+            class="flex flex-col gap-4 items-start lg:flex-row md:justify-around md:gap-6 lg:gap-8"
+          >
+            <button
+              class="rounded-full bg-white border-none text-black text-sm md:text-lg px-14 py-4 font-thin"
+            >
+              <i class="fa-solid fa-download"></i>
+              Download for Windows
+            </button>
+            <button
+              class="rounded-full bg-black border-none text-white text-sm md:text-lg px-14 py-4 font-thin"
+            >
+              Open Discord in your Browser
+            </button>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./images/Image2.svg"
+        alt="Discord Image"
+        class="absolute block bottom-0 -left-4 md:hidden lg:inline-block lg:bottom-0 lg:-left-96 -z-1 w-80 mx-auto lg:w-1/2"
+      />
+      <img
+        src="./images/Image1.svg"
+        alt="Discord Image"
+        class="absolute hidden md:inline-block md:-right-16 bottom-0 right-4 lg:inline-block lg:bottom-0 lg:-right-96 -z-1 w-80 md:w-2/3 lg:w-1/2"
+      />
+
+      <!-- Hero div ends  -->
+    </div>
+
+    <!-- New Section start  -->
+    <div
+      class="px-6 pt-14 lg:px-12 pb-14 bg-white overflow-hidden relative md:pt-44"
+    >
+      <!-- Section hero 1 -->
+      <section
+        id="section-1"
+        class="flex flex-col md:flex-row md:justify-start justify-around items-center gap-6 lg:gap-44 text-black"
+        data-aos="fade-up"
+      >
+        <div id="img-section1" class="w-full md:w-2/3">
+          <img
+            src="./images/section1Image.svg"
+            alt="Discord section image"
+            class="mx-auto"
+          />
+        </div>
+        <div
+          id="section1-content"
+          class="flex flex-col w-full gap-4 md:gap-10 items-start text-left md:w-1/3"
+        >
+          <h2
+            class="text-xl md:text-2xl lg:text-5xl font-normal lg:font-medium lg:leading-tight tracking-wide md:w-10/12"
+            id="section1-head"
+          >
+            Create an invite-only place where you belong
+          </h2>
+          <p
+            class="text-md md:text-lg lg:text-xl tracking-wide leading-8 lg:w-9/12 text-slate-600"
+          >
+            Discord servers are organized into topic-based channels where you
+            can collaborate, share, and just talk about your day without
+            clogging up a group chat.
+          </p>
+        </div>
+      </section>
+    </div>
+    <div
+      class="px-6 pt-14 lg:px-12 pb-14 bg-white overflow-hidden relative md:pt-44"
+    >
+      <!-- Section hero 2 -->
+      <section
+        id="section-2"
+        class="flex flex-col md:flex-row-reverse justify-around items-center gap-6 lg:gap-44 text-black"
+        data-aos="fade-up"
+      >
+        <div id="img-section2" class="w-full md:w-2/3">
+          <img
+            src="./images/section2Image.svg"
+            alt="Discord section image"
+            class="mx-auto"
+          />
+        </div>
+        <div
+          id="section1-content"
+          class="flex flex-col w-full gap-4 md:gap-10 md:pl-14 md:w-1/3 mx-auto"
+        >
+          <h2
+            class="text-xl md:text-2xl lg:text-5xl font-normal lg:font-medium lg:leading-tight tracking-wide"
+            id="section2-head"
+          >
+            Where hanging out is easy
+          </h2>
+          <p
+            class="text-md md:text-lg lg:text-xl tracking-wide leading-8 lg:w-10/12 text-slate-600"
+          >
+            Grab a seat in a voice channel when you’re free. Friends in your
+            server can see you’re around and instantly pop in to talk without
+            having to call.
+          </p>
+        </div>
+      </section>
+    </div>
+    <div
+      class="px-6 pt-14 lg:px-12 pb-14 bg-white overflow-hidden relative md:py-32"
+    >
+      <!-- Section hero 3 -->
+      <section
+        id="section-3"
+        class="flex flex-col md:flex-row justify-around items-center gap-6 lg:gap-44 text-black"
+        data-aos="fade-up"
+      >
+        <div id="img-section3" class="w-full md:w-2/3">
+          <img
+            src="./images/section3Image.svg"
+            alt="Discord section image"
+            class="mx-auto"
+          />
+        </div>
+        <div
+          id="section3-content"
+          class="flex flex-col w-full md:w-1/3 gap-4 md:gap-10 md:pr-14"
+        >
+          <h2
+            class="text-xl md:text-2xl lg:text-5xl ffont-normal lg:font-medium lg:leading-tight tracking-wide"
+            id="section1-head"
+          >
+            From few to a fandom
+          </h2>
+          <p
+            class="text-md md:text-lg lg:text-xl tracking-wide leading-8 lg:w-10/12 text-slate-600"
+          >
+            Get any community running with moderation tools and custom member
+            access. Give members special powers, set up private channels, and
+            more.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Section 4  -->
+    <div
+      class="px-6 pt-14 lg:px-12 pb-14 bg-white overflow-hidden relative md:pt-32"
+    >
+      <section
+        id="section-4"
+        class="flex flex-col justify-around items-left md:items-center gap-10 md:gap-28 text-black"
+        data-aos="fade-up"
+      >
+        <div id="section4-content" class="flex flex-col w-full gap-4 md:gap-10">
+          <h2
+            class="text-xl md:text-2xl lg:text-4xl font-bold lg:font-extrabold lg:leading-tight tracking-wider mx-auto"
+            id="section4-head"
+          >
+            RELIABLE TECH FOR STAYING CLOSE
+          </h2>
+          <p
+            class="text-md md:text-lg lg:text-xl font-thin tracking-wide md:leading-8 md:w-10/12 md:mx-auto md:px-6 md:text-center"
+          >
+            Low-latency voice and video feels like you’re in the same room. Wave
+            hello over video, watch friends stream their games, or gather up and
+            have a drawing session with screen share.
+          </p>
+        </div>
+        <div
+          id="img-section4"
+          class="w-full md:scale-105 lg:scale-125 transition-all md:pb-10"
+        >
+          <img
+            src="./images/section4Image.svg"
+            alt="Discord section image"
+            class="mx-auto"
+          />
+        </div>
+      </section>
+    </div>
+    <div class="px-6 pt-14 lg:px-12 pb-14 bg-white overflow-hidden relative">
+      <section id="section-" class="text-black mx-auto text-center py-12">
+        <div id="section5-img">
+          <img
+            src="./images/section5Image.svg"
+            alt="Star image razor pay"
+            class="mx-auto"
+          />
+        </div>
+        <h3 class="text-lg md:text-3xl font-normal">
+          Ready to start your journey?
+        </h3>
+        <button
+          class="rounded-full bg-[#515ee7] border-none text-white text-sm md:text-lg px-14 py-4 relative top-14"
+        >
+          <i class="fa-solid fa-download"></i>
+          Download for Windows
+        </button>
+      </section>
+    </div>
+
+    <div
+      class="px-6 pt-14 lg:px-12 pb-14 bg-zinc-800 overflow-hidden relative md:pt-32"
+    >
+      <section
+        id="footer"
+        class="flex flex-col md:flex-row justify-around items-left md:items-start gap-10 md:gap-28 text-white"
+      >
+        <div
+          id="footer-left"
+          class="flex flex-col gap-6 items-start justify-start md:w-1/4"
+        >
+          <h4
+            class="text-3xl font-extrabold text-[#515ee7] uppercase tracking-wider"
+          >
+            Imagine a place
+          </h4>
+          <div id="lang-footer">
+            <div id="lang" class="flex flex-row gap-2 items-center">
+              <!-- jnbcj -->
+              <span
+                >English , USA <i class="fa-solid fa-circle-chevron-down"></i
+              ></span>
+            </div>
+          </div>
+          <div id="socials" class="flex flex-row gap-6">
+            <!-- Twitter -->
+            <i class="fa-brands fa-twitter text-xl"></i>
+            <!-- Instagram -->
+            <i class="fa-brands fa-instagram text-xl"></i>
+            <!-- Hashnode  -->
+            <i class="fa-brands fa-hashnode text-xl"></i>
+            <!-- Github -->
+            <i class="fa-brands fa-github text-xl"></i>
+          </div>
+        </div>
+
+        <div
+          id="footer-right"
+          class="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-8 md:gap-y-0 w-2/3"
+        >
+          <div class="flex flex-col gap-4 items-start">
+            <span id="main-footer-desc1" class="text-[#515ee7]"> Product</span>
+            <a href="#" class="no-underline hover:underline text-md"
+              >Download</a
+            >
+            <a href="#" class="no-underline hover:underline text-md">Nitro</a>
+            <a href="#" class="no-underline hover:underline text-md">Status</a>
+          </div>
+          <div class="flex flex-col gap-4 items-start">
+            <span id="main-footer-desc2" class="text-[#515ee7]"> Company</span>
+            <a href="#" class="no-underline hover:underline text-md">About</a>
+            <a href="#" class="no-underline hover:underline text-md">Jobs</a>
+            <a href="#" class="no-underline hover:underline text-md"
+              >Branding</a
+            >
+            <a href="#" class="no-underline hover:underline text-md"
+              >Newsroom</a
+            >
+          </div>
+          <div class="flex flex-col gap-4 items-start">
+            <span id="main-footer-desc2" class="text-[#515ee7]">
+              Resources</span
+            >
+            <a href="#" class="no-underline hover:underline text-md">College</a>
+            <a href="#" class="no-underline hover:underline text-md">Support</a>
+            <a href="#" class="no-underline hover:underline text-md">Safety</a>
+            <a href="#" class="no-underline hover:underline text-md">Blog</a>
+            <a href="#" class="no-underline hover:underline text-md"
+              >Feedback</a
+            >
+            <a href="#" class="no-underline hover:underline text-md"
+              >Developers</a
+            >
+            <a href="#" class="no-underline hover:underline text-md"
+              >Streamkit</a
+            >
+            <a href="#" class="no-underline hover:underline text-md"
+              >Creaters</a
+            >
+            <a href="#" class="no-underline hover:underline text-md"
+              >Community</a
+            >
+          </div>
+          <div class="flex flex-col gap-4 items-start">
+            <span id="main-footer-desc2" class="text-[#515ee7]"> Policies</span>
+            <a href="#" class="no-underline hover:underline text-md">Terms</a>
+            <a href="#" class="no-underline hover:underline text-md">Privacy</a>
+            <a href="#" class="no-underline hover:underline text-md"
+              >Cookie Setting</a
+            >
+            <a href="#" class="no-underline hover:underline text-md"
+              >Guidelines</a
+            >
+            <a href="#" class="no-underline hover:underline text-md"
+              >Acknowledgements</a
+            >
+            <a href="#" class="no-underline hover:underline text-md"
+              >Licenses</a
+            >
+            <a href="#" class="no-underline hover:underline text-md"
+              >Moderations</a
+            >
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Section end  -->
+    <div id="footer-container" class="px-6 lg:px-12 pb-8 bg-zinc-800 relative">
+      <section
+        id="footer-bottom"
+        class="flex flex-col items-center text-white px-10 py-6 gap-8"
+      >
+        <div class="w-full h-[2px] bg-[#515ee7]"></div>
+        <div class="flex flex-row justify-between w-full items-center">
+          <div class="logobox-footer">
+            <img src="./images/logo.svg" alt="Discord Logo" />
+          </div>
+          <a
+            href="#"
+            class="rounded-full bg-[#515ee7] border-none text-sm md:text-md px-3 py-2"
+            role="button"
+            >Download</a
+          >
+        </div>
+      </section>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 200,
+      });
+    </script>
+    <script src="main.js"></script>
+  </body>
+</html>
